@@ -10,4 +10,11 @@ pipeline {
             }
         }
     }
+    stages {
+        stage ('Second') {
+            steps {
+                echo "Second step" 
+            }
+        }
+    }
 }
