@@ -14,5 +14,10 @@ pipeline {
                 echo "Second step" 
             }
         }
+        stage ('Invoke Child') {
+            steps {
+                build job: 'pipeline-child'
+            }
+        }
     }
 }
