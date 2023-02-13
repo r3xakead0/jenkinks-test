@@ -13,7 +13,7 @@ pipeline {
             steps {
                 build job: 'pipeline-child', 
                 parameters: [
-                    string(name: 'VERSION', value: ${RELEASE_VERSION})
+                    string(name: 'VERSION', value: "${RELEASE_VERSION}")
                 ], 
                 wait: true
             }
