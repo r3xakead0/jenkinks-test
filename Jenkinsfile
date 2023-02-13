@@ -34,7 +34,8 @@ pipeline {
                                     string(name: 'VERSION', value: "${RELEASE_VERSION}")
                                 ], 
                                 wait: true
-                    echo "${buildResults.getResult()}"                
+                    echo "${buildResults.getResult()}"       
+                }         
             }
         }
     }
