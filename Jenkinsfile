@@ -9,17 +9,13 @@ pipeline {
                 echo "Hello World ${RELEASE_VERSION}" 
             }
         }
-        stage ('Second') {
-            steps {
-                echo "Second step" 
-            }
-        }
         stage ('Invoke Child') {
             steps {
                 build job: 'pipeline-child', 
                 parameters: [
-                    string(name: 'VERSION', value: "1.0.1")
-                ]
+                    string(name: 'VERSION', value: ${RELEASE_VERSION})
+                ], 
+                wait: true
             }
         }
     }
