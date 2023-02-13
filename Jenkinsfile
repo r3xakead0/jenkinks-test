@@ -34,7 +34,7 @@ pipeline {
                                     string(name: 'VERSION', value: "${RELEASE_VERSION}")
                                 ], 
                                 wait: true
-                        println(buildResults.getBuildVariables()["BUILD_VARIABLE"])    
+                    println(buildResults.getBuildVariables()["MESSAGE"])    
                 }         
             }
         }
