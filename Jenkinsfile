@@ -9,8 +9,6 @@ pipeline {
                 echo "Hello World ${RELEASE_VERSION}" 
             }
         }
-    }
-    stages {
         stage ('Second') {
             steps {
                 echo "Second step" 
