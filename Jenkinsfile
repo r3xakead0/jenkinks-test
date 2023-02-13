@@ -18,5 +18,12 @@ pipeline {
                 wait: true
             }
         }
+        stage("Run script"){
+            steps {
+                script {
+                    bat "echo Hello World"
+                }
+            }
+        }
     }
 }
