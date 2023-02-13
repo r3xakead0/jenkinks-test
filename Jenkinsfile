@@ -16,7 +16,10 @@ pipeline {
         }
         stage ('Invoke Child') {
             steps {
-                build job: 'pipeline-child'
+                build job: 'pipeline-child', 
+                parameters: [
+                    string(name: 'VERSION', value: "1.0.1")
+                ]
             }
         }
     }
